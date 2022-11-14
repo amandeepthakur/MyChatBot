@@ -7,5 +7,5 @@ object Constants {
 
     const val OPEN_GOOGLE = "Opening Google..."
     const val OPEN_SEARCH = "Searching..."
-    const val OPEN_CAMERA = "Opening camrea APP"
+    const val OPEN_CAMERA = "Opening camera APP"
 }

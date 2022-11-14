@@ -12,6 +12,7 @@ import com.example.mychatbot_1.R
 import com.example.mychatbot_1.utils.Constants.RECEIVE_ID
 import com.example.mychatbot_1.utils.Constants.SEND_ID
 import com.example.mychatbot_1.utils.BotResponse
+import com.example.mychatbot_1.utils.Constants.OPEN_CAMERA
 import com.example.mychatbot_1.utils.Constants.OPEN_GOOGLE
 import com.example.mychatbot_1.utils.Constants.OPEN_SEARCH
 import com.example.mychatbot_1.utils.Time
@@ -151,6 +152,11 @@ class MainActivity : AppCompatActivity() {
                         val searchTerm: String? = message.substringAfterLast("search")
                         site.data = Uri.parse("https://www.google.com/search?&q=$searchTerm")
                         startActivity(site)
+                    }
+                    OPEN_CAMERA -> {
+                        speakOut("Opening Camera")
+                        var cameraIntent = Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE)
+                        startActivity(cameraIntent)
                     }
 
                 }
