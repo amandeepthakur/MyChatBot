@@ -51,8 +51,8 @@
         tools:listitem="@layout/message_item" />
     <View
         android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="#F44336"
+        android:layout_height="5dp"
+        android:background="#673AB7"
         android:id="@+id/dark_divider"/>
 
 
