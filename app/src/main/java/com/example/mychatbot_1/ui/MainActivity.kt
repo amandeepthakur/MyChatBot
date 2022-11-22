@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.mychatbot_1.Message
+import com.example.mychatbot_1.data.Message
 import com.example.mychatbot_1.R
 import com.example.mychatbot_1.utils.Constants.RECEIVE_ID
 import com.example.mychatbot_1.utils.Constants.SEND_ID
@@ -24,8 +24,7 @@ class MainActivity : AppCompatActivity() {
     private var tts: TextToSpeech? = null
     private val TAG = "MainActivity"
 
-    //You can ignore this messageList if you're coming from the tutorial,
-    // it was used only for my personal debugging
+
     var messagesList = mutableListOf<Message>()
 
     private lateinit var adapter: MessagingAdapter
@@ -121,7 +120,7 @@ class MainActivity : AppCompatActivity() {
         val timeStamp = Time.timeStamp()
 
         GlobalScope.launch {
-            //Fake response delay
+            //Fake delay
             delay(1000)
 
             withContext(Dispatchers.Main) {

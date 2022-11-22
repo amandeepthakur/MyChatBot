@@ -11,7 +11,7 @@ object BotResponse {
 
     fun basicResponses(_message: String): String {
 
-        val random = (0..3).random()
+        val random = (0..5).random()
         val message =_message.toLowerCase()
 
         return when {
@@ -42,8 +42,13 @@ object BotResponse {
                     0 -> "Hello there!"
                     1 -> "Sup"
                     2 -> "Buongiorno!"
-                    3-> "Kya haal hai apke!"
-                    else -> "error" }
+                    3-> "Hi"
+                    4-> "Hey"
+                    5-> "Hola"
+
+
+                    else -> "Error"
+                     }
             }
             //INTRODUCTION
             message.contains("Introduce")|| message.contains("name") -> {
@@ -57,6 +62,9 @@ object BotResponse {
                     1 -> "I'm hungry..."
                     2 -> "Pretty good! How about you?"
                     3 -> "I'm tired!!!"
+                    4 -> "I'm doing great, thanks for asking!"
+                    5 -> "I'm doing fine, thanks for asking!"
+
                     else -> "error"
                 }
             }
@@ -89,7 +97,10 @@ object BotResponse {
                 when (random) {
                     0 -> "I don't understand..."
                     1 -> "Try asking me something different"
-                    2 -> "Idk"
+                    2 -> "I don't know what you mean"
+                    3 -> "I'm not sure what you're asking"
+                    4 -> "I'm sorry, I don't know the answer to that"
+                    5 -> "I'm not sure what you mean"
                     else -> "error"
                 }
             }
